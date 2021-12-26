@@ -2,6 +2,7 @@ package myPackage;
 
 import myPackage.dataStructure.MapStuff;
 import myPackage.dataStructure.SetStuff;
+import myPackage.exam.colections.Car;
 import myPackage.exercise.Employee;
 
 import java.util.*;
@@ -27,7 +28,22 @@ public class Application {
 //        for (Employee emp: employeeList){
 //            System.out.println(emp);
 //        }
-        //printNumberPyramid(10); //wywołanie metody do zadania Task1
+//      ---------------------------------------------- Task1 ------------------------------------------------------------------------------
+//      printNumberPyramid(10); //wywołanie metody do zadania Task1
+//      ---------------------------------------------- Task2 ------------------------------------------------------------------------------
+        Car punto = new Car(false,2000,1,0,26499.99);
+        Car sedan = new Car(false,1995,1,1,18020.39);
+        Car tesla = new Car(true,2018,3,2,30000);
+        Car ford = new Car(true,2021,2,3,244200);
+        Car suzuki = new Car(false,2017,2,4,55500.10);
+        Car nissan = new Car(false,2014,1,5,43999);
+        Car peugeot = new Car(false,1990,1,6,18495);
+        Car lexus = new Car(true,2021,3,7,233300);
+        Car fiat = new Car(false,2000,1,8,29999.99);
+        Car dacia = new Car(false,2000,2,9,29999.99);
+        Car bmw = new Car(true,2000,3,10,29999.99);
+        Car skoda = new Car(false,2000,2,11,29999.99);
+        Car volvo = new Car(false,2000,1,12,29999.99);
 
     }//koniec metody głównej "main" to, co znajduje się poza nią nie zostanie wykonane, chyba że zostanie wywołane z wnętrza metody "main"
 

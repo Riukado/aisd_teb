@@ -11,6 +11,7 @@ public class Task2 {
     public static List<Car> getCarList() { //TIP singleton
         //zwraca aktualny stan listy aut
         //todo
+
         return null;
     }
 
