@@ -1,13 +1,26 @@
 package myPackage.exam.colections;
 
-
-import java.util.Collections;
 import java.util.List;
 
 public class Task2 extends Car{
         //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
         //todo ma być posortowana po roczniku, auta nowsze jako pierwsze a starze później i stale utrzymywać porządek
-    private static List<Car> carList;
+
+    Car punto = new Car(false,2000,1,0,26499.99);
+    Car sedan = new Car(false,1995,1,1,18020.39);
+    Car tesla = new Car(true,2018,3,2,30000);
+    Car ford = new Car(true,2021,2,3,244200);
+    Car suzuki = new Car(false,2017,2,4,55500.10);
+    Car nissan = new Car(false,2014,1,5,43999);
+    Car peugeot = new Car(false,1990,1,6,18495);
+    Car lexus = new Car(true,2021,3,7,233300);
+    Car fiat = new Car(false,2010,1,8,3089.99);
+    Car dacia = new Car(false,2006,2,9,13030);
+    Car bmw = new Car(true,2022,3,10,12245.99);
+    Car skoda = new Car(false,2015,2,11,40000);
+    Car volvo = new Car(false,2012,1,12,15000);
+
+    public static List<Car> carList;
 
     public Task2(boolean isExclusive, int yearOfProduction, int levelOfEquipment, int id, double value) {
         super(isExclusive, yearOfProduction, levelOfEquipment, id, value);
@@ -16,7 +29,7 @@ public class Task2 extends Car{
     public static List<Car> getCarList() { //TIP singleton
         //zwraca aktualny stan listy aut
         //todo
-        return null;
+        return carList;
     }
 
     public static void printSortedCars() {
@@ -26,6 +39,7 @@ public class Task2 extends Car{
         //auta najnowsze, o najwyższym roku produkcji, mają być wyświetlane przed autami starszymi
         //auta o wyższym poziomie wyposażenia mają być przed autami o niższym poziomie wyposażenia
         //auta droższe mają być wyświetlane przed tańszymi
+        System.out.println();
 
     }
 
@@ -37,13 +51,11 @@ public class Task2 extends Car{
     }
 
     public static void addCarsToList() {
-        //
-        //todo
+        carList.add();
     }
 
     public static void removeCarFromList() {
-        //
-        //todo
+        carList.remove();
     }
 
     public static void printCarListAfterSomeModifications() {
@@ -51,6 +63,7 @@ public class Task2 extends Car{
         //usuń z listy 1-2 auta
         //wyświetl listę
         //todo
+        carList.add();
     }
 
 }

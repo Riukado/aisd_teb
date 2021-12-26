@@ -1,14 +1,17 @@
 package myPackage.exam.colections;
 
-public class Car implements Comparable<Car>{
+import java.util.Objects;
+
+public class Car implements Comparable<Car> {
     boolean isExclusive; // true or false
     int yearOfProduction; // eg 2021, 2015 etc
     int levelOfEquipment; // 3 > 2 > 1, higher the better
     int id;
     double value; // how much does it cost for client
 
+
     //patrz Employee
-    //todo dodaj wszystkie brakujące metody do klasy aby móc jej używać w zadniu Task2
+    //todo dodaj wszystkie brakujące metody do klasy aby móc jej używać w zadaniu Task2
 
     public Car(boolean isExclusive, int yearOfProduction, int levelOfEquipment, int id, double value) {
         this.isExclusive = isExclusive;
@@ -17,6 +20,7 @@ public class Car implements Comparable<Car>{
         this.id = id;
         this.value = value;
     }
+
 
     public int compareTo(Car otherCar) {
         int result = otherCar.getExclusive().compareTo(this.getExclusive());
