@@ -15,9 +15,13 @@ public class Task1 {
     //333
     //33
     //3
-    //todo
 
     public static void printNumberPyramid(int numberOfPyramidLevels) {
+        String s = "3";
+        for(int i; numberOfPyramidLevels > 0; numberOfPyramidLevels--){ // inteliJ nie lubił wpisania numberOfPyramidLevels w miejsce zmiennej i
+            System.out.println(s);
+            s = s + "3";
+        }
 
     }
 }

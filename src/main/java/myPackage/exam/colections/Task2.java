@@ -4,7 +4,7 @@ package myPackage.exam.colections;
 import java.util.List;
 
 public class Task2 {
-        //przynajmniej 10 elementów, pokrywająca większość przypadkó i umożliwiająca po wyświetlonych danych ocenić działanie programu
+        //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
         //todo ma być posortowana po roczniku, auta nowsze jako pierwsze a starze później i stale utrzymywać porządek
     private static List<Car> carList;
 
