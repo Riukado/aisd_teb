@@ -1,17 +1,21 @@
 package myPackage.exam.colections;
 
 
+import java.util.Collections;
 import java.util.List;
 
-public class Task2 {
+public class Task2 extends Car{
         //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
         //todo ma być posortowana po roczniku, auta nowsze jako pierwsze a starze później i stale utrzymywać porządek
     private static List<Car> carList;
 
+    public Task2(boolean isExclusive, int yearOfProduction, int levelOfEquipment, int id, double value) {
+        super(isExclusive, yearOfProduction, levelOfEquipment, id, value);
+    }
+
     public static List<Car> getCarList() { //TIP singleton
         //zwraca aktualny stan listy aut
         //todo
-
         return null;
     }
 
@@ -22,6 +26,7 @@ public class Task2 {
         //auta najnowsze, o najwyższym roku produkcji, mają być wyświetlane przed autami starszymi
         //auta o wyższym poziomie wyposażenia mają być przed autami o niższym poziomie wyposażenia
         //auta droższe mają być wyświetlane przed tańszymi
+
     }
 
     public static void printCarsToValueAndLevelOfEquipment(double maxValue, int levelOfEquipment) {
@@ -47,4 +52,5 @@ public class Task2 {
         //wyświetl listę
         //todo
     }
+
 }

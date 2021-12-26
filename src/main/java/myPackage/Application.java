@@ -45,6 +45,8 @@ public class Application {
         Car skoda = new Car(false,2015,2,11,40000);
         Car volvo = new Car(false,2012,1,12,15000);
 
+
+
     }//koniec metody głównej "main" to, co znajduje się poza nią nie zostanie wykonane, chyba że zostanie wywołane z wnętrza metody "main"
 
 
