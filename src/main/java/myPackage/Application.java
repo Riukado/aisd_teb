@@ -39,11 +39,11 @@ public class Application {
         Car nissan = new Car(false,2014,1,5,43999);
         Car peugeot = new Car(false,1990,1,6,18495);
         Car lexus = new Car(true,2021,3,7,233300);
-        Car fiat = new Car(false,2000,1,8,29999.99);
-        Car dacia = new Car(false,2000,2,9,29999.99);
-        Car bmw = new Car(true,2000,3,10,29999.99);
-        Car skoda = new Car(false,2000,2,11,29999.99);
-        Car volvo = new Car(false,2000,1,12,29999.99);
+        Car fiat = new Car(false,2010,1,8,3089.99);
+        Car dacia = new Car(false,2006,2,9,13030);
+        Car bmw = new Car(true,2022,3,10,12245.99);
+        Car skoda = new Car(false,2015,2,11,40000);
+        Car volvo = new Car(false,2012,1,12,15000);
 
     }//koniec metody głównej "main" to, co znajduje się poza nią nie zostanie wykonane, chyba że zostanie wywołane z wnętrza metody "main"
 
