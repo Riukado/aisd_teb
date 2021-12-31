@@ -1,35 +1,32 @@
 package myPackage.exam.colections;
 
-import java.util.List;
+import java.util.*;
 
-public class Task2 extends Car{
+public class Task2 {
         //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
-        //todo ma być posortowana po roczniku, auta nowsze jako pierwsze a starze później i stale utrzymywać porządek
 
-    Car punto = new Car(false,2000,1,0,26499.99);
-    Car sedan = new Car(false,1995,1,1,18020.39);
-    Car tesla = new Car(true,2018,3,2,30000);
-    Car ford = new Car(true,2021,2,3,244200);
-    Car suzuki = new Car(false,2017,2,4,55500.10);
-    Car nissan = new Car(false,2014,1,5,43999);
-    Car peugeot = new Car(false,1990,1,6,18495);
-    Car lexus = new Car(true,2021,3,7,233300);
-    Car fiat = new Car(false,2010,1,8,3089.99);
-    Car dacia = new Car(false,2006,2,9,13030);
-    Car bmw = new Car(true,2022,3,10,12245.99);
-    Car skoda = new Car(false,2015,2,11,40000);
-    Car volvo = new Car(false,2012,1,12,15000);
+    static Car punto = new Car(false,2000,1,0,26499.99);
+    static Car sedan = new Car(false,1995,1,1,18020.39);
+    static Car tesla = new Car(true,2018,3,2,30000);
+    static Car ford = new Car(true,2021,2,3,244200);
+    static Car suzuki = new Car(false,2017,2,4,55500.10);
+    static Car nissan = new Car(false,2014,1,5,43999);
+    static Car peugeot = new Car(false,1990,1,6,18495);
+    static Car lexus = new Car(true,2021,3,7,233300);
+    static Car fiat = new Car(false,2010,1,8,3089.99);
+    static Car dacia = new Car(false,2006,2,9,13030);
+    static Car bmw = new Car(true,2022,3,10,12245.99);
+    static Car skoda = new Car(false,2015,2,11,40000);
+    static Car volvo = new Car(false,2012,1,12,15000);
 
-    public static List<Car> carList;
+    public static List<Car> carList = new LinkedList<>(Arrays.asList(punto,sedan,tesla,ford,suzuki,nissan, peugeot,lexus,fiat,dacia, bmw, skoda, volvo));
 
-    public Task2(boolean isExclusive, int yearOfProduction, int levelOfEquipment, int id, double value) {
-        super(isExclusive, yearOfProduction, levelOfEquipment, id, value);
-    }
 
-    public static List<Car> getCarList() { //TIP singleton
-        //zwraca aktualny stan listy aut
-        //todo
-        return carList;
+    public static void getCarList() {
+        System.out.println("Aktualny stan listy: ");
+
+        printCarListAfterSomeModifications(carList);
+        printSortedCars();
     }
 
     public static void printSortedCars() {
@@ -39,7 +36,10 @@ public class Task2 extends Car{
         //auta najnowsze, o najwyższym roku produkcji, mają być wyświetlane przed autami starszymi
         //auta o wyższym poziomie wyposażenia mają być przed autami o niższym poziomie wyposażenia
         //auta droższe mają być wyświetlane przed tańszymi
-        System.out.println();
+        Collections.sort(carList);
+        System.out.println("Posortowana lista aut: ");
+        printCarListAfterSomeModifications(carList);
+        System.out.println("Liczba pozycji na liście: "+carList.size());
 
     }
 
@@ -47,23 +47,50 @@ public class Task2 extends Car{
         //Kontekst biznesowy: klient wchodzi na stronę salonu samochodów używanych i chce zobaczyć auta do pewnej kwoty "maxValue"
         //oraz mające konkretny poziom wyposażenia np: poziom 2 = auto ma klimatyzacje, a poziom 1 auto klimatyzacji nie ma itp
         //ZADANIE: wyfiltruj a następnie wypisz auta od najtańszego do najdroższego z listy aut
-        //todo tutaj wykonaj zadanie
+        getCarList();
+        List<Car> listOfCarsFilter = new LinkedList<>();
+
+        for (Car car : carList) {
+            if(car.getValue() <= maxValue && Objects.equals(car.getLevelOfEquipment(), levelOfEquipment)){
+                listOfCarsFilter.add(car);
+            }
+        }
+
+        Collections.reverse(listOfCarsFilter);
+        System.out.println("Lista pogrupowana według ceny: " + maxValue + " oraz po poziomie wyposażenia: " + levelOfEquipment);
+
+        printCarListAfterSomeModifications(listOfCarsFilter);
     }
 
     public static void addCarsToList() {
-        carList.add();
+        getCarList();
+
+        carList.add(volvo);
+        carList.add(bmw);
+        carList.add(lexus);
+
+        System.out.println("Auta dodane.");
+        printCarListAfterSomeModifications(carList);
     }
 
     public static void removeCarFromList() {
-        carList.remove();
+        getCarList();
+        carList.remove(dacia);
+        carList.remove(fiat);
+        carList.remove(punto);
+        carList.remove(sedan);
+
+        System.out.println("Auta usunięte");
+        printCarListAfterSomeModifications(carList);
     }
 
-    public static void printCarListAfterSomeModifications() {
+    public static void printCarListAfterSomeModifications(List<Car> list) {
         //dodaj 2-3 nowe auta do listy
         //usuń z listy 1-2 auta
         //wyświetl listę
-        //todo
-        carList.add();
+        for (Car car : list) {
+            System.out.println(car);
+        }
     }
 
 }

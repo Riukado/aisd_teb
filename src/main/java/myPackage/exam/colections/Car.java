@@ -1,23 +1,23 @@
 package myPackage.exam.colections;
 
-import java.util.Objects;
+import java.util.UUID;
 
 public class Car implements Comparable<Car> {
-    boolean isExclusive; // true or false
-    int yearOfProduction; // eg 2021, 2015 etc
-    int levelOfEquipment; // 3 > 2 > 1, higher the better
-    int id;
-    double value; // how much does it cost for client
+    Boolean isExclusive; // true or false
+    Integer yearOfProduction; // eg 2021, 2015 etc
+    Integer levelOfEquipment; // 3 > 2 > 1, higher the better
+    UUID id;
+    Double value; // how much does it cost for client
 
 
     //patrz Employee
-    //todo dodaj wszystkie brakujące metody do klasy aby móc jej używać w zadaniu Task2
+    //dodaj wszystkie brakujące metody do klasy, aby móc jej używać w zadaniu Task2
 
     public Car(boolean isExclusive, int yearOfProduction, int levelOfEquipment, int id, double value) {
         this.isExclusive = isExclusive;
         this.yearOfProduction = yearOfProduction;
         this.levelOfEquipment = levelOfEquipment;
-        this.id = id;
+        this.id = UUID.randomUUID();
         this.value = value;
     }
 
@@ -56,12 +56,11 @@ public class Car implements Comparable<Car> {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "isExclusive=" + isExclusive +
-                ", yearOfProduction=" + yearOfProduction +
-                ", levelOfEquipment=" + levelOfEquipment +
-                ", id=" + id +
-                ", value=" + value +
-                '}';
+        return
+                "Czy jest ekskluzywne: " + isExclusive +
+                ", Rok produkcji: " + yearOfProduction +
+                ", Poziom wyposażenia: " + levelOfEquipment +
+                ", ID: " + id +
+                ", Cena:  "+ value;
     }
 }
