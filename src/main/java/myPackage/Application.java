@@ -2,8 +2,8 @@ package myPackage;
 
 import myPackage.dataStructure.MapStuff;
 import myPackage.dataStructure.SetStuff;
-import myPackage.exam.colections.Car;
-import myPackage.exam.colections.Task2;
+//import myPackage.exam.colections.Car;
+//import myPackage.exam.colections.Task2;
 import myPackage.exercise.Employee;
 
 import java.util.*;
@@ -30,13 +30,13 @@ public class Application {
 //            System.out.println(emp);
 //        }
 //      ---------------------------------------------- Task1 ------------------------------------------------------------------------------
-//      printNumberPyramid(10); //wywołanie metody do zadania Task1
+      printNumberPyramid(10); //wywołanie metody do zadania Task1
 //      ---------------------------------------------- Task2 ------------------------------------------------------------------------------
-        Task2.addCarsToList();
-        System.out.println("Dodano auta");
-        Task2.removeCarFromList();
-        System.out.println("Skasowano auta");
-        Task2.printCarsToValueAndLevelOfEquipment(45000, 2);
+//        Task2.addCarsToList();
+//        System.out.println("Dodano auta");
+//        Task2.removeCarFromList();
+//        System.out.println("Skasowano auta");
+//        Task2.printCarsToValueAndLevelOfEquipment(60000, 2);
 
 
 

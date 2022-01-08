@@ -17,11 +17,19 @@ public class Task1 {
     //3
 
     public static void printNumberPyramid(int numberOfPyramidLevels) {
-        String s = "3";
-        for(int i; numberOfPyramidLevels > 0; numberOfPyramidLevels--){ // inteliJ nie lubił wpisania numberOfPyramidLevels w miejsce zmiennej i
-            System.out.println(s);
-            s = s + "3";
-        }
+        printNumberPyramidRecursionUpsideDown(numberOfPyramidLevels);
+    }
 
+    private static void printNumberPyramidRecursionUpsideDown(int numberOfPyramidLevels){
+        if (numberOfPyramidLevels <= 1) {
+            System.out.println("3");
+        }
+        else {
+            for (int i = 0; i < numberOfPyramidLevels; i++) {
+                System.out.print("3");
+            }
+            System.out.println();
+            printNumberPyramidRecursionUpsideDown(numberOfPyramidLevels - 1);
+        }
     }
 }
